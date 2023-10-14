@@ -29,6 +29,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+	font-family: "Verdana", Helvetica, Sans-serif;
 }
 ol, ul {
 	list-style: none;
@@ -63,7 +64,7 @@ table {
 }
 
 .font-color{
-    color: rgba(52, 92, 70, 36) !important;
+    color: rgba(161, 194, 175, 76) !important;
 }
 
 
@@ -94,3 +95,9 @@ table {
     padding: 0.3rem 0.8rem;
 
 }
+
+.nav-link:hover{
+    text-decoration:underline;
+    background-color: rgba(52, 92, 70, 36);
+}
+
