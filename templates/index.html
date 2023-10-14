@@ -20,10 +20,13 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap-icons/bootstrap-icons.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <script src="{{ url_for('static', filename='bootstrap/js/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='scripts.js')}}"></script>
+
+    <link rel="icon" href="{{ url_for('static', filename='src/favicon.ico')}}">
 
     <title>Stack Flow</title>
 </head>
-<body data-bs-spy="scroll" data-bs-target="#navbar-scroll">
+<body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3 fixed-top" id="navbar-scroll">
     <div class="container">
         <a class="navbar-brand" href="{{url_for('base')}}"><i class="bi bi-graph-up-arrow font-color"> Stock Flow</i></a>
@@ -47,6 +50,5 @@
 
     {% endblock %}
 </div>
-
 </body>
 </html>

@@ -1,39 +1,61 @@
-{% extends "base.html" %}
+{% extends 'index.html' %}
 {% block content %}
-<div class="row">
-<div class="col-md-4">
-    <h4 class="h4">Sprawdź rentowność akcji</h4>
-    <form>
+  <div class="row">
+    <div class="col-md-4">
+      <h4 class="h4">Sprawdź rentowność akcji</h4>
+      <form>
         <div class="form-group mb-4">
-            <label for="company">Nazwa spółki</label>
-            <input type="text" class="form-control" id="company" name="company">
+          <label for="companyInput">Nazwa spółki</label>
+          <input type="text" class="form-control" id="companyInput" name="companyInput" />
         </div>
         <div class="form-group mb-4">
-            <label for="unitPrice">Cena jednostkowa</label>
-            <input type="number" step="0.01" class="form-control" id="unitPrice" name="unitPrice">
+          <label for="unitPriceInput">Cena jednostkowa ackji</label>
+          <input type="number" step="0.01" class="form-control" id="unitPriceInput" name="unitPriceInput" />
         </div>
         <div class="form-group mb-4">
-            <label for="funds">Inwestowane środki</label>
-            <input type="number" step="0.01" class="form-control" id="funds" name="funds">
+          <label for="fundsInput">Inwestowane środki</label>
+          <input type="number" step="0.01" class="form-control" id="fundsInput" name="fundsInput" />
         </div>
         <div class="form-group mb-4">
-            <label for="percents">Przewidywany zysk</label>
-            <select class="form-control" id="percents" name="percents">
-                <option value="5">5%</option>
-                <option value="10">10%</option>
-                <option value="15">15%</option>
-                <option value="20">20%</option>
-                <option value="25">25%</option>
-                <option value="30">30%</option>
-                <option value="35">35%</option>
-                <option value="40">40%</option>
-            </select>
+          <label for="percents">Przewidywany zysk</label>
+          <select class="form-control" id="percents" name="percents">
+            <option value="5">5%</option>
+            <option value="10">10%</option>
+            <option value="15">15%</option>
+            <option value="20">20%</option>
+            <option value="25">25%</option>
+            <option value="30">30%</option>
+            <option value="35">35%</option>
+            <option value="40">40%</option>
+          </select>
         </div>
-        <button type="button" class="sf-button w-100">Przelicz</button>
-    </form>
-</div>
-    <div class="col-md-8">
-        <h4 class="h4 text-center">Szacowane zyski i koszty</h4>
+        <button type="button" class="sf-button w-100" onclick="countFunction()">Przelicz</button>
+      </form>
     </div>
-</div>
+    <div id="countedInfo" class="col-md-8" hidden>
+      <h4 class="h4 text-center">Szacowane zyski i koszty</h4>
+      <div class="container">
+        <div class="form-group mb-2">
+          <label for="companyName">Nazwa spółki:</label>
+          <span id="companyName" name="companyName">a</span>
+        </div>
+        <div class="form-group mb-2">
+          <label for="unitPrice">Cena jednostkowa akcji:</label>
+          <span id="unitPrice" name="unitPrice">b</span>
+        </div>
+        <div class="form-group mb-2">
+          <label for="funds">Inwestowane środki:</label>
+          <span id="funds" name="funds">c</span>
+        </div>
+        <div class="form-group mb-2">
+            <label for="funds">Ilość akcji:</label>
+            <span id="funds" name="funds">c</span>
+          </div>
+        <div>
+        <div class="form-group mb-2">
+            <span id="infoText">d</span>
+        </div>
+      </div>
+    </div>
+  </div>
 {% endblock %}

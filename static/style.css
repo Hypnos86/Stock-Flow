@@ -96,7 +96,19 @@ table {
 
 }
 
-.nav-link:hover{
+.sf-button:hover {
+    transform: scale(1.1);
+}
+
+.sf-button:active {
+    outline: 1;
+    box-shadow: 0 0 0 0.25rem rgba(32,56,42,22);
+    color: white;
+    border-color:white;
+    transform: transform .2s;
+}
+
+.nav-link:hover {
     text-decoration:underline;
     background-color: rgba(52, 92, 70, 36);
 }
